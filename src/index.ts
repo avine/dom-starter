@@ -1,3 +1,3 @@
 
-const test = document.getElementById('say-hello');
-test.innerHTML = 'It works!';
+const test = document.getElementById('test');
+test.innerHTML = 'JavaScript works!';
