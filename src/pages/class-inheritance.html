@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DomStarter</title>
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles.scss">
+
+  <style>
+    #sandbox {
+      padding: 1rem 2rem;
+      border-radius: 3px;
+      background-color: #f3f3f3;
+    }
+
+    #console {
+      padding: 1rem 2rem;
+      border-radius: 3px;
+      background-color: #333;
+      color: #f3f3f3;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>DOM class inheritance</h1>
+
+  <div id="sandbox"></div>
+
+  <pre id="console" title="Click to empty the console"></pre>
+  <script>
+    document.getElementById('console').addEventListener('click', function() {
+      this.innerHTML = '';
+    });
+  </script>
+
+  <strong>Inspect class inheritance:</strong>
+  <ul id="actions"></ul>
+
+  <script src="./class-inheritance.ts"></script>
+</body>
+</html>
