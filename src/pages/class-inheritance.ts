@@ -15,6 +15,28 @@ const inspect: { [constructorName: string]: (prototype: Prototype) => void; } = 
   },
 
   Node(node: Node) {
+    /*
+    parentNode (parentElement)
+    previousSibling
+    nextSibling
+    childNodes
+    firstChild
+    lastChild
+
+    isConnected
+    hasChildNodes
+    contains
+
+    appendChild
+    inserBefore
+    removeChild
+    replaceChild
+    cloneNode
+
+    textContent
+    getRootNode
+    normalize
+    */
     log(
       'nodeName = ' + node.nodeName,
       'nodeType = ' + node.nodeType,
@@ -25,14 +47,14 @@ const inspect: { [constructorName: string]: (prototype: Prototype) => void; } = 
   EventTarget(eventTarget: EventTarget) {
     log('It\'s time to click on the link above!');
 
-    const onClick = function(event) {
-      // Change the Anchor text
-      (this as HTMLAnchorElement).innerText = 'You clicked!';
+    const onClick = function(event: Event) {
+      // Change the inner text
+      (this as HTMLElement).innerText = `A "${event.type}" event occured!`;
 
       // Remove click listener
       eventTarget.removeEventListener('click', onClick);
 
-      // Dispatch an event
+      // Dispatch an event (See also `CustomEvent`)
       const wow = new Event('wow');
       eventTarget.dispatchEvent(wow);
     };
@@ -41,8 +63,8 @@ const inspect: { [constructorName: string]: (prototype: Prototype) => void; } = 
     eventTarget.addEventListener('click', onClick);
 
     // Listen to "wow"
-    eventTarget.addEventListener('wow', function(event) {
-      (this as HTMLAnchorElement).innerText += ' Wow!';
+    eventTarget.addEventListener('wow', function(event: Event) {
+      (this as HTMLElement).innerText += ' Wow!';
     });
   },
 
@@ -86,8 +108,16 @@ while (proto = Object.getPrototypeOf(proto)) { // tslint:disable-line:no-conditi
   });
 }
 
-function log(...args) {
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = '<div>' + args.join('</div><div>') + '</div>';
-  document.getElementById('console').appendChild(wrapper);
+// ============================================================================
+
+const output = document.getElementById('output');
+function log(...messages) {
+  messages.forEach((message) => {
+    const div = document.createElement('div');
+    div.innerHTML = message;
+    output.appendChild(div);
+  });
 }
+
+// Empty the output on click
+output.addEventListener('click', () => output.innerHTML = '');
