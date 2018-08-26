@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DomStarter</title>
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="./flexbox.scss">
+
+  <style>
+    html, body {
+      height: 100%;
+      font-size: 16px;
+    }
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 1rem;
+      overflow: auto;
+    }
+    /*.wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      border: 1px dashed dodgerblue;
+      overflow: auto;
+    }
+    .wrapper > * {
+      flex-grow: 1;
+      position: relative;
+    }
+    .wrapper-header {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+      background-color: #eee;
+      padding: 1rem;
+      flex-grow: 0;
+    }
+    .wrapper-main > .app-flex {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }*/
+    .wrapper {
+      height: 80%;
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      border: 1px dashed dodgerblue;
+      overflow: auto;
+    }
+    .wrapper > * {
+      height: 100%;
+    }
+    .wrapper-header {
+      display: none;
+    }
+    .wrapper-main > .app-flex {
+      height: inherit;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="app-flex app-flex--spaced app-flex--row">
+  <div class="app-flex__box-12"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-6 app-flex app-flex--col">
+    <div class="app-flex__box-4"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+    <div class="app-flex__box-8"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  </div>
+
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">
+      Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>
+  </div></div>
+</div>      
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="app-flex app-flex--spaced app-flex--col">
+  <div class="app-flex__box-12"><div class="app-flex__content app-flex__content--fill">Top</div></div>
+
+  <div class="app-flex__box-6 app-flex app-flex--row">
+    <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Left</div></div>
+    <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Right</div></div>
+  </div>
+
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Bottom</div></div>
+</div>
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="app-flex app-flex--spaced app-flex--row">
+  <div class="app-flex__box-12"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-11"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-1"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-10"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-2"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-9"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-3"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-8"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-4"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-7"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-5"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+</div>
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="app-flex app-flex--spaced app-flex--col">
+  <div class="app-flex__box-12"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-11"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-1"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-10"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-2"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-9"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-3"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-8"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-4"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-7"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-5"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+  <div class="app-flex__box-6"><div class="app-flex__content app-flex__content--fill">Content</div></div>
+</div>
+
+</main>
+</div>
+
+</body>
+</html>

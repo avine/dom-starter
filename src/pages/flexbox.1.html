@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DomStarter</title>
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="./flexbox.scss">
+
+  <style>
+    html, body {
+      height: 100%;
+      font-size: 16px;
+    }
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 1rem;
+      overflow: auto;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      border: 1px dashed dodgerblue;
+      overflow: auto;
+    }
+    .wrapper > * {
+      flex-grow: 1;
+      position: relative;
+    }
+    .wrapper-header {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+      background-color: #eee;
+      padding: 1rem;
+      flex-grow: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="container-row">
+  <div class="item-12"><div class="box-row">Content</div></div>
+
+  <div class="item-6 item-12-sm container-col">
+    <div class="item-6"><div class="box-col">Content</div></div>
+    <div class="item-6"><div class="box-col">Content</div></div>
+  </div>
+
+  <div class="item-6 item-12-sm"><div class="box-row">
+      Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>Content<br>
+  </div></div>
+</div>      
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="container-col">
+  <div class="item-12"><div class="box-col">Top</div></div>
+
+  <div class="item-6 container-row">
+    <div class="item-6 item-12-sm"><div class="box-row">Left</div></div>
+    <div class="item-6 item-12-sm"><div class="box-row">Right</div></div>
+  </div>
+
+  <div class="item-6"><div class="box-col">Bottom</div></div>
+</div>
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="container-row">
+  <div class="item-12"><div class="box-row">Content</div></div>
+
+  <div class="item-11"><div class="box-row">Content</div></div>
+  <div class="item-1"><div class="box-row">Content</div></div>
+
+  <div class="item-10"><div class="box-row">Content</div></div>
+  <div class="item-2"><div class="box-row">Content</div></div>
+
+  <div class="item-9"><div class="box-row">Content</div></div>
+  <div class="item-3"><div class="box-row">Content</div></div>
+
+  <div class="item-8"><div class="box-row">Content</div></div>
+  <div class="item-4"><div class="box-row">Content</div></div>
+
+  <div class="item-7"><div class="box-row">Content</div></div>
+  <div class="item-5"><div class="box-row">Content</div></div>
+
+  <div class="item-6"><div class="box-row">Content</div></div>
+  <div class="item-6"><div class="box-row">Content</div></div>
+</div>
+
+</main>
+</div><div class="wrapper">
+<header class="wrapper-header">Header</header>
+<main class="wrapper-main">
+
+<div class="container-col">
+  <div class="item-12"><div class="box-col">Content</div></div>
+
+  <div class="item-11"><div class="box-col">Content</div></div>
+  <div class="item-1"><div class="box-col">Content</div></div>
+
+  <div class="item-10"><div class="box-col">Content</div></div>
+  <div class="item-2"><div class="box-col">Content</div></div>
+
+  <div class="item-9"><div class="box-col">Content</div></div>
+  <div class="item-3"><div class="box-col">Content</div></div>
+
+  <div class="item-8"><div class="box-col">Content</div></div>
+  <div class="item-4"><div class="box-col">Content</div></div>
+
+  <div class="item-7"><div class="box-col">Content</div></div>
+  <div class="item-5"><div class="box-col">Content</div></div>
+
+  <div class="item-6"><div class="box-col">Content</div></div>
+  <div class="item-6"><div class="box-col">Content</div></div>
+</div>
+
+</main>
+</div>
+
+</body>
+</html>
